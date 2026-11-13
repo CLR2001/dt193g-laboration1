@@ -1,17 +1,19 @@
 <script setup lang="ts">
-  import { RouterView } from 'vue-router'
-  import HeaderComponent from './components/HeaderComponent.vue'
-  import FooterComponent from './components/FooterComponent.vue';
+import { RouterView } from 'vue-router'
+import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <HeaderComponent />
+  <div class="grid min-h-svh grid-rows-[auto_1fr_auto]">
+    <HeaderComponent />
 
-  <main>
-    <RouterView />
-  </main>
+    <main>
+      <RouterView />
+    </main>
 
-  <FooterComponent />
+    <FooterComponent />
+  </div>
 </template>
 
 <style scoped></style>
