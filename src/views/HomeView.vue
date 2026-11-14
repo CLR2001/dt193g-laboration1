@@ -8,9 +8,7 @@ import FooterTailwind from '@/components/FooterTailwind.vue'
   <div class="grid min-h-svh w-full grid-rows-[auto_1fr_auto]">
     <HeaderTailwind></HeaderTailwind>
     <main class="mx-auto flex w-[min(100%,70ch)] flex-col p-[5%] sm:p-12">
-      <section
-        class="bg-card-surface h-fit rounded-2xl border border-[var(--color-border-line)] p-8 shadow-[var(--shadow-card)] sm:p-12"
-      >
+      <section class="bg-card-surface border-border-line shadow-(--shadow-card)] h-fit rounded-2xl border p-8 sm:p-12">
         <h1 class="text-2xl sm:text-4xl">Laboration 1 - DT193G</h1>
         <p class="my-6 text-lg sm:text-xl">av Ludvig Rosenqvist</p>
         <p class="max-w-[60ch]">

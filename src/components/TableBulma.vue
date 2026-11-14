@@ -19,12 +19,12 @@ const { tableData, deleteRow } = tableDataHandler()
           <td>{{ row.framework }}</td>
           <td>{{ row.developer }}</td>
           <td>
-            <a :href="row.url" target="_blank" class="text-blue-600 underline">
+            <a :href="row.url" target="_blank" class="">
               {{ row.linkText }}
             </a>
           </td>
           <td>
-            <button @click="deleteRow(row.id)" class="cursor-pointer text-red-500 underline">Ta bort</button>
+            <button @click="deleteRow(row.id, row.framework)" class="">Ta bort</button>
           </td>
         </tr>
       </tbody>

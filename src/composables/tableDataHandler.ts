@@ -60,9 +60,19 @@ export function tableDataHandler() {
     tableData.value.push(newRow)
   }
 
-  const deleteRow = (id: string) => {
-    tableData.value = tableData.value.filter((row) => row.id !== id)
+  const deleteRow = (id: string, framework: string) => {
+    const userConfirm = confirm(`Är du säker att du vill radera ramverket '${framework}' från tabellen?`)
+    if (userConfirm) {
+      tableData.value = tableData.value.filter((row) => row.id !== id)
+    }
   }
 
-  return { tableData, addRow, deleteRow }
+  const resetTable = () => {
+    const userConfirm = confirm(`Är du säker att du vill återställa hela tabellen?`)
+    if (userConfirm) {
+      tableData.value = initializeData()
+    }
+  }
+
+  return { tableData, addRow, deleteRow, resetTable }
 }
