@@ -5,8 +5,8 @@ import ToggleThemeButton from './ToggleThemeButton.vue'
 
 <template>
   <footer>
-    <div class="bg-brand-primary">
-      <ul class="flex w-full flex-col items-center gap-8 py-8 text-white sm:flex-row sm:justify-around sm:gap-0">
+    <div class="">
+      <ul class="">
         <li>Ludvig Rosenqvist</li>
         <li>2026</li>
         <li>Laboration 1</li>
