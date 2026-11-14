@@ -1,15 +1,17 @@
 <script setup>
-import { ref } from 'vue'
 import HeaderTailwind from '@/components/HeaderTailwind.vue'
 import FooterTailwind from '@/components/FooterTailwind.vue'
 import TableTailwind from '@/components/TableTailwind.vue'
+import FormTailwind from '@/components/FormTailwind.vue'
 </script>
 
 <template>
   <div class="grid min-h-svh grid-rows-[auto_1fr_auto]">
     <HeaderTailwind></HeaderTailwind>
-    <h1 class="m-auto mt-12 text-4xl tracking-tight">Tailwind</h1>
-    <main class="mx-auto flex w-full max-w-[65ch] flex-col items-center gap-8 overflow-hidden px-[5%] py-12 sm:px-12">
+    <main
+      class="mx-auto flex h-fit w-full max-w-[65ch] flex-col items-center gap-8 overflow-x-hidden px-[5%] py-12 sm:px-12"
+    >
+      <h1 class="text-4xl tracking-tight">Tailwind</h1>
       <section class="bg-card-surface border-border-line rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12">
         <h2 class="mb-2 text-xl tracking-tight"><b>Om ramverket:</b></h2>
         <p>
@@ -27,6 +29,7 @@ import TableTailwind from '@/components/TableTailwind.vue'
         </p>
       </section>
       <TableTailwind></TableTailwind>
+      <FormTailwind></FormTailwind>
     </main>
     <FooterTailwind></FooterTailwind>
   </div>

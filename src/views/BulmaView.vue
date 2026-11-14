@@ -2,6 +2,7 @@
 import HeaderBulma from '@/components/HeaderBulma.vue'
 import FooterBulma from '@/components/FooterBulma.vue'
 import TableBulma from '@/components/TableBulma.vue'
+import FormBulma from '@/components/FormBulma.vue'
 </script>
 
 <template>

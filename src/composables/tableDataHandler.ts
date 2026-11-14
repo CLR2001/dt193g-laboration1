@@ -36,14 +36,14 @@ const initializeData = (): IDataRow[] => {
   ]
 }
 
+const getData = (): IDataRow[] => {
+  const jsonData = localStorage.getItem(STORAGE_KEY)
+  return jsonData ? JSON.parse(jsonData) : initializeData()
+}
+
+const tableData = ref<IDataRow[]>(getData())
+
 export function tableDataHandler() {
-  const getData = (): IDataRow[] => {
-    const jsonData = localStorage.getItem(STORAGE_KEY)
-    return jsonData ? JSON.parse(jsonData) : initializeData()
-  }
-
-  const tableData = ref<IDataRow[]>(getData())
-
   watch(
     tableData,
     (newValue: IDataRow[]) => {
