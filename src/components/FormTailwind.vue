@@ -75,13 +75,13 @@ const handleReset = () => {
       <div class="m-auto mt-8 flex flex-wrap justify-center gap-6">
         <button
           type="submit"
-          class="bg-brand-primary cursor-pointer rounded-2xl border border-white/10 px-6 py-4 text-white hover:scale-105 active:scale-100"
+          class="bg-brand-primary cursor-pointer rounded-2xl border border-white/10 px-6 py-4 text-white transition-transform duration-100 hover:scale-105 active:scale-100"
         >
           Skicka
         </button>
         <button
           type="button"
-          class="bg-brand-primary cursor-pointer rounded-2xl border border-white/10 px-6 py-4 text-white hover:scale-105 active:scale-100"
+          class="bg-brand-primary cursor-pointer rounded-2xl border border-white/10 px-6 py-4 text-white transition-transform duration-150 hover:scale-105 active:scale-100"
           @click="handleReset"
         >
           Rensa

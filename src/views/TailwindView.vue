@@ -12,7 +12,7 @@ import FormTailwind from '@/components/FormTailwind.vue'
       class="mx-auto flex h-fit w-full max-w-[65ch] flex-col items-center gap-8 overflow-x-hidden px-[5%] py-12 sm:px-12"
     >
       <h1 class="text-4xl tracking-tight">Tailwind</h1>
-      <section class="bg-card-surface border-border-line rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12">
+      <section class="bg-card-surface border-border-line w-full rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12">
         <h2 class="mb-2 text-xl tracking-tight"><b>Om ramverket:</b></h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quia incidunt sequi consequatur praesentium ab
@@ -20,12 +20,16 @@ import FormTailwind from '@/components/FormTailwind.vue'
           tempore impedit.
         </p>
       </section>
-      <section class="bg-card-surface border-border-line rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12">
+      <section class="bg-card-surface border-border-line w-full rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12">
         <h2 class="mb-2 text-lg tracking-tight"><b>Utvärdering av ramverket:</b></h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolor dolores natus totam maiores ipsum
-          saepe impedit, explicabo doloribus perspiciatis quidem vel necessitatibus cupiditate quo consectetur mollitia
-          quis in nobis.
+          <b>Fördelar:</b>
+        </p>
+        <p>
+          <b>Nackdelar:</b>
+        </p>
+        <p>
+          <b>Slutsats:</b>
         </p>
       </section>
       <TableTailwind></TableTailwind>
