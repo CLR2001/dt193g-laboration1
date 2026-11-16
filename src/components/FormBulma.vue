@@ -40,7 +40,7 @@ const handleReset = () => {
     <form @submit.prevent="handleSubmit" class="is-flex is-flex-direction-column gap-10">
       <div>
         <div class="field is-flex is-flex-direction-column">
-          <label for="framework" class="label">Ramverk:</label>
+          <label for="framework" class="label has-text-black">Ramverk:</label>
           <input
             v-model="formData.framework"
             type="text"
@@ -51,7 +51,7 @@ const handleReset = () => {
           />
         </div>
         <div class="field is-flex is-flex-direction-column">
-          <label for="developer" class="label">Utvecklare:</label>
+          <label for="developer" class="label has-text-black">Utvecklare:</label>
           <input
             v-model="formData.developer"
             type="text"
@@ -62,7 +62,7 @@ const handleReset = () => {
           />
         </div>
         <div class="field">
-          <label for="difficulty" class="label">Svårighetsgrad:</label>
+          <label for="difficulty" class="label has-text-black">Svårighetsgrad:</label>
           <div class="select">
             <select v-model="formData.difficulty" name="difficulty" class="">
               <option value="Lätt">Lätt</option>
@@ -72,11 +72,11 @@ const handleReset = () => {
           </div>
         </div>
         <div class="field is-flex is-align-items-center">
-          <label for="recommended" class="label mr-2">Rekommenderas för nybörjare:</label>
+          <label for="recommended" class="label has-text-black mr-2">Rekommenderas för nybörjare:</label>
           <input v-model="formData.recommended" type="checkbox" name="recommended" class="checkbox mb-1" />
         </div>
         <div class="field is-flex is-flex-direction-column">
-          <label for="review" class="label">Recension:</label>
+          <label for="review" class="label has-text-black">Recension:</label>
           <textarea
             v-model="formData.review"
             name="review"
