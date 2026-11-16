@@ -61,13 +61,15 @@ const handleReset = () => {
             class="input"
           />
         </div>
-        <div class="field is-flex is-flex-direction-column">
+        <div class="field">
           <label for="difficulty" class="label">Svårighetsgrad:</label>
-          <select v-model="formData.difficulty" name="difficulty" class="input">
-            <option value="Lätt">Lätt</option>
-            <option value="Medel">Medel</option>
-            <option value="Svår">Svår</option>
-          </select>
+          <div class="select">
+            <select v-model="formData.difficulty" name="difficulty" class="">
+              <option value="Lätt">Lätt</option>
+              <option value="Medel">Medel</option>
+              <option value="Svår">Svår</option>
+            </select>
+          </div>
         </div>
         <div class="field is-flex is-align-items-center">
           <label for="recommended" class="label mr-2">Rekommenderas för nybörjare:</label>
@@ -84,8 +86,8 @@ const handleReset = () => {
         </div>
       </div>
       <div class="is-flex is-justify-content-center gap-10">
-        <button type="submit" class="button">Skicka</button>
-        <button type="button" class="button" @click="handleReset">Rensa</button>
+        <button type="submit" class="button is-success">Skicka</button>
+        <button type="button" class="button is-danger" @click="handleReset">Rensa</button>
       </div>
     </form>
   </div>

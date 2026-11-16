@@ -28,7 +28,9 @@ const { tableData, deleteRow, resetTable } = tableDataHandler()
       </tbody>
     </table>
   </div>
-  <button @click="resetTable" class="button m-auto w-fit p-4">Återställ tabellen</button>
+  <div class="m-auto">
+    <button @click="resetTable" class="button is-warning">Återställ tabellen</button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
