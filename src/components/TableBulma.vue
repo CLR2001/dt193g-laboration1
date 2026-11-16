@@ -10,7 +10,8 @@ const { tableData, deleteRow, resetTable } = tableDataHandler()
         <tr>
           <th class="">Ramverk</th>
           <th class="">Utvecklare</th>
-          <th class="">Länk</th>
+          <th class="">Svårighetsgrad</th>
+          <th class="">Rekommenderas</th>
           <th class="">Åtgärd</th>
         </tr>
       </thead>
@@ -18,11 +19,8 @@ const { tableData, deleteRow, resetTable } = tableDataHandler()
         <tr v-for="row in tableData" :key="row.id" class="">
           <td class="">{{ row.framework }}</td>
           <td class="">{{ row.developer }}</td>
-          <td class="">
-            <a :href="row.url" target="_blank" class="">
-              {{ row.linkText }}
-            </a>
-          </td>
+          <td class="">{{ row.difficulty }}</td>
+          <td class="">{{ row.recommended ? 'Ja' : 'nej' }}</td>
           <td class="has-text-danger">
             <button @click="deleteRow(row.id, row.framework)" class="">Ta bort</button>
           </td>

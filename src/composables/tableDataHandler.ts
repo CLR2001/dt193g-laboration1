@@ -4,8 +4,9 @@ export interface IDataRow {
   id: string
   framework: string
   developer: string
-  linkText: string
-  url: string
+  difficulty: string
+  recommended: boolean
+  review: string
 }
 
 const STORAGE_KEY = 'tableData'
@@ -16,22 +17,25 @@ const initializeData = (): IDataRow[] => {
       id: crypto.randomUUID(),
       framework: 'Tailwind',
       developer: 'Tailwind Labs Inc',
-      linkText: 'tailwindcss.com',
-      url: 'https://tailwindcss.com/',
+      difficulty: 'Medel',
+      recommended: true,
+      review: 'Smidigt utility-first ramverk som ger total kontroll över varje pixel.',
     },
     {
       id: crypto.randomUUID(),
       framework: 'Bulma',
       developer: 'Jeremy Thomas',
-      linkText: 'bulma.io',
-      url: 'https://bulma.io/',
+      difficulty: 'Medel',
+      recommended: true,
+      review: 'Rent komponentbaserat ramverk, men lite klurigt att skriva om till egna teman.',
     },
     {
       id: crypto.randomUUID(),
       framework: 'Bootstrap',
       developer: 'Bootstrap Core Team',
-      linkText: 'getbootstrap.com',
-      url: 'https://getbootstrap.com/',
+      difficulty: 'Lätt',
+      recommended: false,
+      review: 'Klassiskt och stabilt med mycket färdiga delar, men lite omodernt.',
     },
   ]
 }

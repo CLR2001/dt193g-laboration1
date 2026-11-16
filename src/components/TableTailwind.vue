@@ -12,8 +12,9 @@ const { tableData, deleteRow, resetTable } = tableDataHandler()
         <tr>
           <th class="px-6 py-4 whitespace-nowrap">Ramverk</th>
           <th class="px-6 py-4 whitespace-nowrap">Utvecklare</th>
-          <th class="px-6 py-4 whitespace-nowrap">Länk</th>
-          <th class="px-6 py-4 whitespace-nowrap"></th>
+          <th class="px-6 py-4 whitespace-nowrap">Svårighetsgrad</th>
+          <th class="px-6 py-4 whitespace-nowrap">Rekommenderas</th>
+          <th class="px-6 py-4 whitespace-nowrap">Åtgärd</th>
         </tr>
       </thead>
       <tbody class="divide-border-line divide-y">
@@ -24,11 +25,8 @@ const { tableData, deleteRow, resetTable } = tableDataHandler()
         >
           <td class="px-6 py-4 whitespace-nowrap">{{ row.framework }}</td>
           <td class="px-6 py-4 whitespace-nowrap">{{ row.developer }}</td>
-          <td class="px-6 py-4 whitespace-nowrap">
-            <a :href="row.url" target="_blank" class="text-blue-500 underline hover:text-blue-700">
-              {{ row.linkText }}
-            </a>
-          </td>
+          <td class="px-6 py-4 whitespace-nowrap">{{ row.difficulty }}</td>
+          <td class="px-6 py-4 whitespace-nowrap">{{ row.recommended ? 'Ja' : 'nej' }}</td>
           <td class="px-6 py-4 whitespace-nowrap">
             <button @click="deleteRow(row.id, row.framework)" class="cursor-pointer text-red-500 hover:text-red-700">
               Ta bort

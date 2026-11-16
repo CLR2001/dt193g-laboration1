@@ -29,22 +29,28 @@ onUnmounted(() => {
     <main class="is-flex is-flex-direction-column is-justify-content-center is-max-desktop container mt-6 mb-6 gap-10">
       <h1 class="is-size-1 has-text-centered">Bulma</h1>
       <section class="has-background-light container block p-10">
-        <h2 class=""><b>Om ramverket:</b></h2>
+        <h2 class="is-size-5"><b>Om ramverket</b></h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quia incidunt sequi consequatur praesentium ab
           fugit quos. Eligendi maxime fugiat culpa, doloribus temporibus voluptatum? Sapiente molestiae consequuntur quo
           tempore impedit.
         </p>
       </section>
-      <section class="has-background-light is-flex is-flex-direction-column container block gap-5 p-10">
-        <h2 class=""><b>Utvärdering av ramverket:</b></h2>
-        <p>
-          <b>Fördelar:</b>
-        </p>
-        <p>
-          <b>Nackdelar:</b>
-        </p>
-        <p>
+      <section class="has-background-light is-flex is-flex-direction-column container block p-10">
+        <h2 class="is-size-5"><b>Utvärdering av ramverket</b></h2>
+        <p class="mt-3"><b>Fördelar:</b></p>
+        <ul>
+          <li>a</li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p class="mt-3"><b>Nackdelar:</b></p>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p class="mt-3">
           <b>Slutsats:</b>
         </p>
       </section>
@@ -61,5 +67,9 @@ onUnmounted(() => {
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.04),
     0 10px 25px -3px rgba(0, 0, 0, 0.05);
+}
+ul {
+  list-style-type: disc;
+  padding-left: 1rem;
 }
 </style>

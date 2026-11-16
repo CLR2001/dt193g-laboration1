@@ -8,13 +8,20 @@ const { addRow } = tableDataHandler()
 const emptyForm = {
   framework: '',
   developer: '',
-  linkText: '',
-  url: '',
+  difficulty: '',
+  recommended: false,
+  review: '',
 }
 const formData = ref<Omit<IDataRow, 'id'>>({ ...emptyForm })
 
 const handleSubmit = () => {
-  if (!formData.value.framework.trim() || !formData.value.developer.trim() || !formData.value.url.trim()) {
+  if (
+    !formData.value.framework.trim() ||
+    !formData.value.developer.trim() ||
+    !formData.value.difficulty.trim() ||
+    !formData.value.recommended ||
+    !formData.value.review.trim()
+  ) {
     alert('Vänligen fyll i alla fält!')
     return
   }
@@ -35,7 +42,7 @@ const handleReset = () => {
       class="border-border-line bg-card-surface rounded-2xl border p-8 shadow-(--shadow-card) sm:p-12"
     >
       <div class="grid items-center gap-x-2 gap-y-2">
-        <label for="" class="w-fit">Ramverk:</label>
+        <label for="framework" class="w-fit">Ramverk:</label>
         <input
           v-model="formData.framework"
           type="text"
@@ -44,7 +51,7 @@ const handleReset = () => {
           placeholder="Tailwind"
           class="bg-page-background w-full rounded-md border border-white/15 px-2 py-1"
         />
-        <label for="" class="w-fit">Utvecklare:</label>
+        <label for="developer" class="w-fit">Utvecklare:</label>
         <input
           v-model="formData.developer"
           type="text"
@@ -53,24 +60,27 @@ const handleReset = () => {
           placeholder="Tailwind Labs Inc"
           class="bg-page-background w-full rounded-md border border-white/15 px-2 py-1"
         />
-        <label for="" class="w-fit">Länktext:</label>
-        <input
-          v-model="formData.linkText"
-          type="text"
-          name="linkText"
-          autocomplete="off"
-          placeholder="tailwindcss.com"
+        <label for="difficulty" class="w-fit">Svårighetsgrad:</label>
+        <select
+          v-model="formData.difficulty"
+          name="difficulty"
           class="bg-page-background w-full rounded-md border border-white/15 px-2 py-1"
-        />
-        <label for="" class="w-fit">URL:</label>
-        <input
-          v-model="formData.url"
-          type="url"
-          name="url"
-          autocomplete="off"
-          placeholder="https://tailwindcss.com/"
+        >
+          <option value="Lätt" selected>Lätt</option>
+          <option value="Medel">Medel</option>
+          <option value="Svår">Svår</option>
+        </select>
+        <div>
+          <label for="recommended" class="mr-2 w-fit">Rekommenderas för nybörjare:</label>
+          <input v-model="formData.recommended" type="checkbox" name="recommended" class="bg-page-background" />
+        </div>
+        <label for="review" class="w-fit">Recension:</label>
+        <textarea
+          v-model="formData.review"
+          name="review"
+          placeholder="Skriv din recension här..."
           class="bg-page-background w-full rounded-md border border-white/15 px-2 py-1"
-        />
+        ></textarea>
       </div>
       <div class="m-auto mt-8 flex flex-wrap justify-center gap-6">
         <button
