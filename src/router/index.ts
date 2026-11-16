@@ -21,6 +21,10 @@ const router = createRouter({
       name: 'bulma',
       component: BulmaView,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 })
 
